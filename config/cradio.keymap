@@ -42,10 +42,10 @@
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
             &kp A      &kp R      HRML(S,       T)      &kp G          &kp M      HRMR(N,       E)      &kp I      &kp O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
+        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , ?      │ . !      │ - _      │
+            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &ht COMMA QMARK  &ht DOT EXCL  &ht MINUS UNDER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB  &kp SPACE      &kp SPACE  &to 1
+                                             &sk LSHIFT &kp SPACE      &to 1      &sk RCTRL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -62,7 +62,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &to 0     &kp ESC        &trans     &trans
+                                             &to 0      &to 0          &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
