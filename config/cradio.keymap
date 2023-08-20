@@ -38,8 +38,8 @@
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  BSPC    │
             &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &ht RC(BSPC) BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
-            &kp A      &kp R      HRML(S,       T)      &kp G          &kp M      HRMR(N,       E)      &ht COLON I  &kp O
+        //│  A/Å     │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I/Æ     │  O/Ø     │
+            &ht RA(W) A  &kp R     HRML(S,       T)      &kp G          &kp M      HRMR(N,       E)      &ht RA(Z) I  &ht RA(L) O
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , ?      │ . !      │ - _      │
             &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &ht QMARK COMMA  &ht EXCL DOT  &ht UNDER MINUS
