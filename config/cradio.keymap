@@ -51,14 +51,14 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  @       │  ^       │  &/¨     │  $/€     │   │  ´/`     │  LPAR/~  │  RPAR    │  =       │  trans   │
-            &kp INS    &kp AT     &kp CARET  &ht LS(RA(SQT)) AMPS  &ht RA(N5) DLLR  &ht GRAVE RA(SQT)  &ht TILDE LPAR  &kp RPAR  &kp EQUAL  &trans
+        //│  ESC     │  @       │  ^       │  &       │  $/€     │   │  ~       │  LPAR    │  RPAR    │  =       │  trans   │
+            &kp ESC    &kp AT     &kp CARET  &kp AMPS   &ht RA(N5) DLLR  &kp TILDE  &kp LPAR  &kp RPAR  &kp EQUAL  &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  +/PSCRN │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp TAB    &ht PSCRN PLUS  &kp N5  &kp N6   &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+        //│  TAB     │  +/PSCRN │  ;       │  :       │  /       │   │  \       │  '/PGUP  │  "/PGDWN │  *       │  ENTER   │
+            &kp TAB    &ht PSCRN PLUS  &kp SEMI  &kp COLON  &kp FSLH   &kp BSLH   &ht PG_UP SQT  &ht PG_DN DQT  &kp ASTRK  &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CAPS    │  #       │  8       │  9       │  0       │   │          │          │          │          │          │
-            &kp CAPS   &kp HASH   &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│  CAPS    │  #       │  LBRC    │  RBRC    │  <       │   │  >       │  LBKT    │  RBKT    │  %       │  |       │
+            &kp CAPS   &kp HASH   &kp LBRC   &kp RBRC   &kp LT         &kp GT     &kp LBKT   &kp RBKT   &kp PRCNT  &kp PIPE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LALT   &to 0          &to 2      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
