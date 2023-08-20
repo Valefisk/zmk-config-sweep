@@ -54,8 +54,8 @@
         //│  ESC     │  @       │  ^       │  &       │  $/€     │   │  ~       │  LPAR    │  RPAR    │  =       │  trans   │
             &kp ESC    &kp AT     &kp CARET  &kp AMPS   &ht RA(N5) DLLR  &kp TILDE  &kp LPAR  &kp RPAR  &kp EQUAL  &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  +/PSCRN │  ;       │  :       │  /       │   │  \       │  '/PGUP  │  "/PGDWN │  *       │  ENTER   │
-            &kp TAB    &ht PSCRN PLUS  &kp SEMI  &kp COLON  &kp FSLH   &kp BSLH   &ht PG_UP SQT  &ht PG_DN DQT  &kp ASTRK  &kp ENTER
+        //│  TAB     │  +/PSCRN │  ;/HOME  │  :/END   │  /       │   │  \       │  '/PGUP  │  "/PGDWN │  *       │  ENTER   │
+            &kp TAB    &ht PSCRN PLUS  &ht HOME SEMI  &ht END COLON  &kp FSLH  &kp BSLH  &ht PG_UP SQT  &ht PG_DN DQT  &kp ASTRK  &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPS    │  #       │  LBRC    │  RBRC    │  <       │   │  >       │  LBKT    │  RBKT    │  %       │  |       │
             &kp CAPS   &kp HASH   &kp LBRC   &kp RBRC   &kp LT         &kp GT     &kp LBKT   &kp RBKT   &kp PRCNT  &kp PIPE
