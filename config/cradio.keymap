@@ -19,15 +19,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
-        
-        caps: caps_word_lock {
-            label = "caps_word_lock";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred"
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&caps_word>;
-        };
     };
 
     conditional_layers {
@@ -64,10 +55,10 @@
             &kp INS    &kp AT     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TAB     │  +/PSCRN │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp TAB    &ht PSCRN PLUS  &kp N5     &kp N6     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &kp TAB    &ht PSCRN PLUS  &kp N5  &kp N6   &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  CAPS    │  #       │  8       │  9       │  0       │   │          │          │          │          │          │
-            &caps CAPS 0  &kp HASH   &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+            &caps_word_lock  &kp HASH  &kp N8  &kp N9   &kp N0         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LALT   &to 0          &to 2      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
