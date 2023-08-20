@@ -27,7 +27,7 @@
             flavor = "tap-preferred"
             tapping-term-ms = <200>;
             bindings = <&kp>, <&caps_word>;
-        }
+        };
     };
 
     conditional_layers {
