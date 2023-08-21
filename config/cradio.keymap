@@ -44,13 +44,13 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  @       │  ^       │  &       │  $/€     │   │  ~       │  LPAR    │  RPAR    │  =       │  trans   │
+        //│  ESC     │  @       │  ^       │  &       │  $/€     │   │  ~       │  (       │  )       │  =       │  trans   │
             &kp ESC    &kp AT     &kp CARET  &kp AMPS   &ht RA(N5) DLLR  &kp TILDE  &kp LPAR  &kp RPAR  &kp EQUAL  &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TAB     │  +/PSCRN │  ;/HOME  │  :/END   │  /       │   │  \       │  '/PGUP  │  "/PGDWN │  *       │  ENTER   │
             &kp TAB    &ht PSCRN PLUS  &ht HOME SEMI  &ht END COLON  &kp FSLH  &kp BSLH  &ht PG_UP SQT  &ht PG_DN DQT  &kp ASTRK  &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CAPS    │  #       │  LBRC    │  RBRC    │  <       │   │  >       │  LBKT    │  RBKT    │  %       │  |       │
+        //│  CAPS    │  #       │  {       │  }       │  <       │   │  >       │  [       │  ]       │  %       │  |       │
             &kp CAPS   &kp HASH   &kp LBRC   &kp RBRC   &kp LT         &kp GT     &kp LBKT   &kp RBKT   &kp PRCNT  &kp PIPE
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp LALT   &to 0          &to 2      &trans
@@ -61,13 +61,13 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│  ESC     │  PLAY    │  PREV    │  NEXT    │  /       │   │  -       │  7       │  8       │  9       │  trans   │
+            &kp ESC    &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
+        //│  TAB     │  MUTE    │  VOLUP   │  VOLDWN  │  *       │   │  +       │  4       │  5       │  6       │  =       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
+        //│          │  ^       │  SCRUP   │  SCRDWN  │  ,       │   │  0       │  1       │  2       │  3       │  trans   │
             &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &to 0          &to 3     &trans
