@@ -79,7 +79,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  ESC     │          │          │          │          │   │          │          │          │          │  RESET   │
-            &kp ESC  &trans     &mmv MOVE_UP  &mwh SCROLL_UP  &mkp LCLK   &trans     &trans     &trans     &trans    &sys_reset
+            &kp ESC    &trans     &trans     &trans     &mkp LCLK      &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TAB     │          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
             &kp TAB  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
