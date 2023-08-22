@@ -71,16 +71,16 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  PLAY    │  PREV    │  NEXT    │  /       │   │  -       │  7       │  8       │  9       │  trans   │
+        //│  ESC     │  PLAY    │  PREV    │  NEXT    │  /       │   │  -       │  7       │  8       │  9       │          │
             &kp ESC    &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &kp FSLH  &kp MINUS  &kp N7  &kp N8    &kp N9     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  MUTE    │  VOLUP   │  VOLDWN  │  *       │   │  +       │  4       │  5       │  6       │  =       │
-            &kp TAB  &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN  &kp ASTRK  &kp PLUS  &kp N4     &kp N5     &kp N6     &kp EQUAL
+        //│  TAB     │  MUTE    │  VOLDWN  │  VOLUP   │  *       │   │  +       │  4       │  5       │  6       │  =       │
+            &kp TAB  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp ASTRK  &kp PLUS  &kp N4     &kp N5     &kp N6     &kp EQUAL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  ^       │  BRIUP   │  BRIDWN  │  ,       │   │  0       │  1       │  2       │  3       │  trans   │
-            &trans  &kp CARET  &kp C_BRI_UP  &kp C_BRI_DN  &kp COMMA   &kp N0     &kp N1     &kp N2     &kp N3     &trans
+        //│          │  ^       │  BRIDWN  │  BRIUP   │  ,       │   │  0       │  1       │  2       │  3       │          │
+            &trans  &kp CARET  &kp C_BRI_DN  &kp C_BRI_UP  &kp COMMA   &kp N0     &kp N1     &kp N2     &kp N3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &to 0          &to 3     &trans
+                                             &trans     &to 0          &to 3      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -92,7 +92,7 @@
             &kp ESC    &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TAB     │          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-            &kp TAB  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+            &kp TAB    &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
