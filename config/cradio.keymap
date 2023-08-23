@@ -41,8 +41,8 @@
         alpha1 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  l       │  g       │  d       │          │   │          │  h       │  u       │  o       │          │
-            &none      &kp L      &kp G      &kp D      &none          &none      &kp H      &kp U      &kp O      &none
+        //│          │  l/LGUI  │  g/LALT  │  d/LCTRL │          │   │          │  h/RCTRL │  u/RALT  │  o/RGUI  │          │
+            &none    &hm LGUI L  &hm LALT G  &hm LCTRL D  &none        &none   &hm RCTRL H  &hm RALT U  &hm RGUI O  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  i       │  s       │  r       │  t       │          │   │          │  n       │  e       │  a       │  c       │
             &kp I      &kp S      &kp R      &kp T      &none          &none      &kp N      &kp E      &kp A      &kp C
