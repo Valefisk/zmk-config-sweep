@@ -13,14 +13,14 @@
 
 / {
     behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <250>;
-            bindings = <&kp>, <&kp>;
+        hrl: homerow_layers {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_LAYERS";
+			#binding-cells = <2>;
+			tapping-term-ms = <220>;
+			quick-tap-ms = <250>;
+			flavor = "tap-preferred";
+			bindings = <&mo>, <&kp>;
         };
         alpha2macro: behavior_macro_1 {
 			compatible = "zmk,behavior-macro";
@@ -69,7 +69,7 @@
             &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │ AL1 SHFT │  AL1     │   │          │  AL2 SHFT│
-                                            &sk LSHIFT  &none          &none      &caps_alpha2macro
+                                            &sk LSHIFT  &trans         &none      &caps_alpha2macro
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -86,8 +86,8 @@
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
             &none      &none      &none      &none      &trans         &none      &none      &none      &to AL1    &kp N2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │  AL1     │   │  TO 3    │          │
-                                             &none      &trans         &to SM1    &none
+        //                                 │          │  AL1     │   │          │          │
+                                             &none      &trans         &none    &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
