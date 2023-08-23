@@ -16,8 +16,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -43,10 +43,11 @@
         //│  i       │  s       │  r       │  t       │          │   │          │  n       │  e       │  a       │  c       │
             &kp I     &kp S       &kp R      &kp T      &none          &none      &kp N      &kp E      &kp A      &kp C
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //│          │          │          │          │          │   │          │          │          │          │  LAYER   │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &kp N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &ht LC(LS(LALT)) SPACE  &key_repeat  &to 1  &to 2
+        //                                 │ SPC/MEH  │  REPEAT  │   │          │          │
+                               &ht LC(LS(LALT)) SPACE  &key_repeat     &to 1      &to 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -54,16 +55,17 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  @       │  ^       │  &       │  $/€     │   │  ~       │  (       │  )       │  =       │          │
-            &kp ESC    &kp AT     &kp CARET  &kp AMPS   &ht RA(N5) DLLR  &kp TILDE  &kp LPAR  &kp RPAR  &kp EQUAL  &trans
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  +/PSCRN │  ;/HOME  │  :/END   │  /       │   │  \       │  '/PGUP  │  "/PGDWN │  *       │  ENTER   │
-            &kp TAB    &ht PSCRN PLUS  &ht HOME SEMI  &ht END COLON  &kp FSLH  &kp BSLH  &ht PG_UP SQT  &ht PG_DN DQT  &kp ASTRK  &kp ENTER
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  CAPS    │  #       │  {       │  }       │  <       │   │  >       │  [       │  ]       │  %       │  |       │
-            &kp CAPS   &kp HASH   &kp LBRC   &kp RBRC   &kp LT         &kp GT     &kp LBKT   &kp RBKT   &kp PRCNT  &kp PIPE
+        //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
+            &none      &none      &none      &none      &none          &none      &none      &none      &to 0      &kp N1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp LALT   &to 0          &to 2      &trans
+        //                                 │          │          │   │          │          │
+                                             &none      &none          &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -71,16 +73,17 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │  PLAY    │  PREV    │  NEXT    │  /       │   │  -       │  7       │  8       │  9       │          │
-            &kp ESC    &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &kp FSLH  &kp MINUS  &kp N7  &kp N8    &kp N9     &trans
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │  MUTE    │  VOLDWN  │  VOLUP   │  *       │   │  +       │  4       │  5       │  6       │  =       │
-            &kp TAB  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp ASTRK  &kp PLUS  &kp N4     &kp N5     &kp N6     &kp EQUAL
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  ^       │  BRIDWN  │  BRIUP   │  ,       │   │  0       │  1       │  2       │  3       │          │
-            &trans  &kp CARET  &kp C_BRI_DN  &kp C_BRI_UP  &kp COMMA   &kp N0     &kp N1     &kp N2     &kp N3     &trans
+        //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
+            &none      &none      &none      &none      &none          &none      &none      &none      &to 0      &kp N2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &to 0          &to 3      &trans
+        //                                 │          │          │   │  TO 3    │          │
+                                             &none      &to 0          &to 3      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -88,16 +91,17 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  ESC     │          │          │          │          │   │          │          │          │          │  RESET   │
-            &kp ESC    &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans    &sys_reset
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-            &kp TAB    &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
+            &none      &none      &none      &none      &none          &none      &none      &none      &to 0      &kp N3
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &to 0          &trans     &trans
+        //                                 │          │          │   │          │          │
+                                             &none      &none          &none      &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
