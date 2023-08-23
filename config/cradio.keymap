@@ -13,6 +13,15 @@
 
 / {
     behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            bindings = <&kp>, <&kp>;
+        };
         alpha2macro: behavior_macro_1 {
 			compatible = "zmk,behavior-macro";
 			label = "MACRO1";
