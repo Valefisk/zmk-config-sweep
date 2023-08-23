@@ -13,8 +13,8 @@
 
 / {
     behaviors {
-        hlt: hold_tap {
-            label = "hold_tap";
+        hrl: homerow_layers {
+            label = "HOMEROW_LAYERS";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
