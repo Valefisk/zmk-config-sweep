@@ -9,7 +9,7 @@
 #define AL1 0
 #define AL2 1
 #define AL2U 2
-#define SYM 3
+#define SM1 3
 
 / {
     behaviors {
@@ -48,8 +48,8 @@
         //│          │          │          │          │          │   │          │          │          │          │  LAYER   │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &kp N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │ SPC/MEH  │  REPEAT  │   │          │          │
-                               &ht LC(LS(LALT)) SPACE  &key_repeat     &to AL2    &to AL2U
+        //                                 │ SPC/MEH  │  REPEAT  │   │  AL2U    │  AL2     │
+                               &ht LC(LS(LALT)) SPACE  &key_repeat     &to AL2U   &to AL2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -57,17 +57,17 @@
         alpha2 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //│          │  v       │  w       │  m       │          │   │          │  f       │  '       │  z       │          │
+            &none      &kp V      &kp W      &kp M      &none          &none      &kp F      &kp SQT    &kp Z      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //│  q       │  j       │  p       │  k       │          │   │          │  b       │  .       │  x       │  y       │
+            &kp Q      &kp J      &kp P      &kp K      &none          &none      &kp B      &kp DOT    &kp X      &kp Y
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
             &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │          │   │          │          │
-                                             &none      &none          &none      &none
+        //                                 │          │  REPEAT  │   │          │          │
+                                            &sk LSHIFT  &trans         &none      &to AL2U
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -75,22 +75,22 @@
         alpha2caps {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //│          │  V       │  W       │  M       │          │   │          │  F       │  "       │  Z       │          │
+            &none      &kp LS(V)  &kp LS(W)  &kp LS(M)  &none          &none      &kp LS(F)  &kp DQT    &kp LS(Z)  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //│  Q       │  J       │  P       │  K       │          │   │          │  B       │  ,       │  X       │  Y       │
+            &kp LS(Q)  &kp LS(J)  &kp LS(P)  &kp LS(K)  &none          &none      &kp LS(B)  &kp COMMA  &kp LS(X)  &kp LS(Y)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
-            &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N2
+            &none      &none      &none      &none      &trans         &none      &none      &none      &to AL1    &kp N2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │          │   │  TO 3    │          │
-                                             &none      &to 0          &to SYM    &none
+        //                                 │          │  REPEAT  │   │  TO 3    │          │
+                                             &none      &trans         &to SYM    &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        symbols {
+        symbols1 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
