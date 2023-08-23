@@ -22,16 +22,6 @@
             quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
         };
-
-        skm: sticky_key_modifier {
-            label = "STICKY_KEY_MODIFIER";
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            release-after-ms = <1000>;
-            quick-release;
-            ignore-modifiers;
-            bindings = <&kp>;
-        };
     };
 
     keymap {
