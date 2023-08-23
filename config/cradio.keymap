@@ -13,8 +13,8 @@
 
 / {
     behaviors {
-        ht: homerow_layers {
-            label = "HOMEROW_LAYERS";
+        hm: homerow_mod {
+            label = "HOMEROW_MOD";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -33,7 +33,7 @@
 			label = "MACRO2";
 			#binding-cells = <0>;
 			bindings = < &sl AL2U >;
-		};
+	    };
     };
 
     keymap {
@@ -45,13 +45,13 @@
             &none      &kp L      &kp G      &kp D      &none          &none      &kp H      &kp U      &kp O      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  i       │  s       │  r       │  t       │          │   │          │  n       │  e       │  a       │  c       │
-            &kp I     &kp S       &kp R      &kp T      &none          &none      &kp N      &kp E      &kp A      &kp C
+            &kp I      &kp S      &kp R      &kp T      &none          &none      &kp N      &kp E      &kp A      &kp C
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │  LAYER   │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &kp N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │ SPC/MEH  │  REPEAT  │   │  AL2 SHFT│  AL2     │
-                               &ht LC(LS(LALT)) SPACE  &key_repeat   &caps_alpha2macro  &alpha2macro
+                               &mt LC(LS(LALT)) SPACE  &key_repeat   &caps_alpha2macro  &alpha2macro
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -65,8 +65,8 @@
         //│  q       │  j       │  p       │  k       │          │   │          │  b       │  .       │  x       │  y       │
             &kp Q      &kp J      &kp P      &kp K      &none          &none      &kp B      &kp DOT    &kp X      &kp Y
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
-            &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N1
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │ AL1 SHFT │  AL1     │   │          │  AL2 SHFT│
                                             &sk LSHIFT  &trans         &none      &caps_alpha2macro
@@ -83,8 +83,8 @@
         //│  Q       │  J       │  P       │  K       │          │   │          │  B       │  ,       │  X       │  Y       │
             &kp LS(Q)  &kp LS(J)  &kp LS(P)  &kp LS(K)  &none          &none      &kp LS(B)  &kp COMMA  &kp LS(X)  &kp LS(Y)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
-            &none      &none      &none      &none      &trans         &none      &none      &none      &to AL1    &kp N2
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &trans         &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │  AL1     │   │          │          │
                                              &none      &trans         &none    &none
