@@ -38,15 +38,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  l       │  g       │  d       │          │   │          │  h       │  u       │  o       │          │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &ht RC(BSPC) BSPC
+            &none      &kp L      &kp G      &kp D      &none          &none      &kp H      &kp U      &kp O      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  i       │  s       │  r       │  t       │          │   │          │  n       │  e       │  a       │  c       │
-            &ht RA(W) A  &kp R     HRML(S,       T)      &kp G          &kp M      HRMR(N,       E)      &ht RA(Z) I  &ht RA(L) O
+            &kp I     &kp S       &kp R      &kp T      &none          &none      &kp N      &kp E      &kp A      &kp C
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &ht QMARK COMMA  &ht EXCL DOT  &ht UNDER MINUS
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &ht LC(LS(LALT)) SPACE  &key_repeat  &to 1  &none
+                                            &ht LC(LS(LALT)) SPACE  &key_repeat  &to 1  &to 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
