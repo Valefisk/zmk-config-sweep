@@ -13,15 +13,6 @@
 
 / {
     behaviors {
-        hrl: homerow_layers {
-			compatible = "zmk,behavior-hold-tap";
-			label = "HOMEROW_LAYERS";
-			#binding-cells = <2>;
-			tapping-term-ms = <220>;
-			quick-tap-ms = <250>;
-			flavor = "tap-preferred";
-			bindings = <&mo>, <&kp>;
-        };
         alpha2macro: behavior_macro_1 {
 			compatible = "zmk,behavior-macro";
 			label = "MACRO1";
