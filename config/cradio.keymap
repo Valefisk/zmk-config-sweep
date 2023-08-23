@@ -13,7 +13,7 @@
 
 / {
     behaviors {
-        cackling: homerow_layers {
+        ht: homerow_layers {
             label = "HOMEROW_LAYERS";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
