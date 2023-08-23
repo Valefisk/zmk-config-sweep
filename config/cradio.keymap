@@ -6,8 +6,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2) &ht LALT k1  &ht LGUI k2
-#define HRMR(k1,k2) &ht RGUI k1  &ht RALT k2
+#define AL1 0
+#define AL2 1
+#define AL2U 2
+#define SYM 3
 
 / {
     behaviors {
@@ -47,7 +49,7 @@
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &kp N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │ SPC/MEH  │  REPEAT  │   │          │          │
-                               &ht LC(LS(LALT)) SPACE  &key_repeat     &to 1      &to 2
+                               &ht LC(LS(LALT)) SPACE  &key_repeat     &to AL2    &to AL2U
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -62,7 +64,7 @@
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
-            &none      &none      &none      &none      &none          &none      &none      &none      &to 0      &kp N1
+            &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │          │
                                              &none      &none          &none      &none
@@ -80,15 +82,15 @@
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
-            &none      &none      &none      &none      &none          &none      &none      &none      &to 0      &kp N2
+            &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │  TO 3    │          │
-                                             &none      &to 0          &to 3      &none
+                                             &none      &to 0          &to SYM    &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        numbers {
+        symbols {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
