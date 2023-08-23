@@ -28,6 +28,12 @@
 			#binding-cells = <0>;
 			bindings = < &sl AL2 >;
 		};
+        caps_alpha2macro: behavior_macro_2 {
+			compatible = "zmk,behavior-macro";
+			label = "MACRO2";
+			#binding-cells = <0>;
+			bindings = < &sl AL2U >;
+		};
     };
 
     keymap {
@@ -44,8 +50,8 @@
         //│          │          │          │          │          │   │          │          │          │          │  LAYER   │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &kp N0
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │ SPC/MEH  │  REPEAT  │   │  AL2U    │  AL2     │
-                               &ht LC(LS(LALT)) SPACE  &key_repeat     &to AL2U   &alpha2macro
+        //                                 │ SPC/MEH  │  REPEAT  │   │  AL2 SHFT│  AL2     │
+                               &ht LC(LS(LALT)) SPACE  &key_repeat   &caps_alpha2macro  &alpha2macro
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -62,8 +68,8 @@
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
             &none      &none      &none      &none      &none          &none      &none      &none      &to AL1    &kp N1
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │  REPEAT  │   │          │          │
-                                            &sk LSHIFT  &trans         &none      &to AL2U
+        //                                 │ AL1 SHFT │  AL1     │   │          │  AL2 SHFT│
+                                            &sk LSHIFT  &none          &none      &caps_alpha2macro
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -80,7 +86,7 @@
         //│          │          │          │          │          │   │          │          │          │  BACK    │  LAYER   │
             &none      &none      &none      &none      &trans         &none      &none      &none      &to AL1    &kp N2
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │          │  REPEAT  │   │  TO 3    │          │
+        //                                 │          │  AL1     │   │  TO 3    │          │
                                              &none      &trans         &to SM1    &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
