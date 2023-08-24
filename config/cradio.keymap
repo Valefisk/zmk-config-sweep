@@ -64,7 +64,7 @@
             &none    &hm LGUI L  &hm LALT G  &hm LCTRL D  &none        &none   &hm RCTRL H  &hm RALT U  &hm RGUI O  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  i       │  s       │  r/SYM1  │  t       │          │   │          │  n       │  e/SYM1  │  a       │  c       │
-            &kp I      &kp S      &hl SM1 R  &kp T      &none          &none      &kp N      &hl SM1 E  &kp A      &kp C
+            &kp I      &hl SM2 S  &hl SM1 R  &kp T      &none          &none      &kp N      &hl SM1 E  &hl SM2 A  &kp C
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
