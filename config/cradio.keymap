@@ -115,8 +115,8 @@
         symbols1 {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  €       │  #       │  $       │          │   │          │  <       │  >       │  ^       │          │
-            &none     &kp RA(N5)  &kp HASH   &kp DLLR   &none          &none      &kp LT     &kp GT     &kp CARET  &none
+        //│          │  €/£     │  #       │  $       │          │   │          │  <       │  >       │  ^       │          │
+            &none  &td LS(RA(N4)) RA(N5)  &kp HASH  &kp DLLR  &none    &none      &kp LT     &kp GT     &kp CARET  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  `       │  ~       │  _       │  \       │          │   │          │  [       │  ]       │  |       │  /       │
             &kp GRAVE  &kp TILDE  &kp UNDER  &kp BSLH   &none          &none      &kp LBKT   &kp RBKT   &kp PIPE   &kp FSLH
