@@ -64,7 +64,7 @@
         //│          │  l/LGUI  │  g/LALT  │  d/LCTRL │          │   │          │  h/RCTRL │  u/RALT  │  o/RGUI  │          │
             &none    &hm LGUI L  &hm LALT G  &hm LCTRL D  &none        &none   &hm RCTRL H  &hm RALT U  &hm RGUI O  &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  i       │  s       │  r/SYM1  │  t       │          │   │          │  n       │  e/SYM1  │  a       │  c       │
+        //│  i/NUM   │  s/SYM2  │  r/SYM1  │  t       │          │   │          │  n       │  e/SYM1  │  a/SYM2  │  c/NUM   │
             &hl NUM I  &hl SM2 S  &hl SM1 R  &kp T      &none          &none      &kp N      &hl SM1 E  &hl SM2 A  &hl NUM C
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
