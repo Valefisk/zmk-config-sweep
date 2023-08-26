@@ -201,7 +201,7 @@
             &none  &kp ESC  &kp LA(LS(TAB)) &kp LA(TAB)  &none         &none  &td RC(V) RC(C)  &kp UP   &kp BKSP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  TAB     │ DEL/HOME │  PLAY    │  NXT/PRV │          │   │          │ LEFT/TAB │  DOWN    │RIGHT/PSCR│  ENTER   │
-            &kp TAB  &td HOME DEL  &kp C_PP  &td C_PREV C_NEXT  &none  &none   &td TAB LEFT  &kp DOWN  &td PSCRN RIGHT  &kp RET
+            &kp TAB  &td HOME DEL  &kp C_PP  &td C_PREV C_NEXT  &none  &none   &td TAB LEFT  &kp DOWN  &td PSCRN RIGHT  &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
