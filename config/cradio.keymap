@@ -27,8 +27,20 @@
 			key-positions = <16 17 18>;
 			bindings = <&caps_word>;
 		};
+        combo_bt  {
+			timeout-ms = <10>;
+			key-positions = <17 18>;
+			bindings = <&to BT>;
+			layers = <SM1>;
+		};
+        lalt {
+			timeout-ms = <20>;
+			key-positions = <12 13>;
+			bindings = <&kp LALT>; 
+			layers = <SYS>; 
+		};
     };
-    
+
     behaviors {
         hm: homerow_mod {
             label = "HOMEROW_MOD";
@@ -187,14 +199,14 @@
         //│          │  ESC     │  PRV TAB │  NXT TAB │          │   │          │  CPY/PST │  UP      │  BKSP    │          │
             &none  &kp ESC  &kp LA(LS(TAB)) &kp LA(TAB)  &none         &none  &td RC(V) RC(C)  &kp UP   &kp BKSP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  TAB     │ DEL/HOME │  5       │  6       │          │   │          │ LEFT/TAB │  DOWN    │RIGHT/PSCR│  ENTER   │
-            &kp TAB    &td HOME DEL   &kp N5     &kp N6     &none          &none  &td TAB LEFT  &td PSCRN DOWN  &kp RIGHT  &kp RET
+        //│  TAB     │ DEL/HOME │  PLAY    │  NXT/PRV │          │   │          │ LEFT/TAB │  DOWN    │RIGHT/PSCR│  ENTER   │
+            &kp TAB  &td HOME DEL  &kp C_PP  &td C_PREV C_NEXT  &none  &none   &td TAB LEFT  &kp DOWN  &td PSCRN RIGHT  &kp RET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │          │          │   │          │          │
-                                            &kp LSHIFT  &trans         &trans     &kp RCTRL
+                                            &hl AL1 LSHIFT  &kp LALT   &trans     &kp RCTRL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
