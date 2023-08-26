@@ -12,6 +12,7 @@
 #define SM1 3
 #define SM2 4
 #define NUM 5
+#define SYS 6
 
 / {
     behaviors {
@@ -68,7 +69,7 @@
             &hl NUM I  &hl SM2 S  &hl SM1 R  &kp T      &none          &none      &kp N      &hl SM1 E  &hl SM2 A  &hl NUM C
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+            &none      &none      &none      &none      &none          &none      &none      &caps_word  &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │ SPC/MEH  │  REPEAT  │   │  AL2 SHFT│  AL2     │
                                &mt LC(LS(LALT)) SPACE  &key_repeat   &caps_alpha2macro  &alpha2macro
@@ -156,6 +157,24 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  -       │  +       │  5       │  6       │          │   │          │  7       │  8       │  9       │  =       │
             &kp MINUS  &kp PLUS   &kp N5     &kp N6     &none          &none      &kp N7     &kp N8     &kp N9   &kp EQUAL
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 │          │          │   │          │          │
+                                            &kp LSHIFT  &trans         &trans     &kp RCTRL
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+        
+        system {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │  ESC     │  PRV TAB │  NXT TAB │          │   │          │  CPY/PST │  UP      │  BKSP    │          │
+            &none  &kp ESC  &kp LA(LS(TAB)) &kp LA(TAB)  &none         &none  &td RC(V) RC(C)  &kp UP   &kp BKSP
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  TAB     │ DEL/HOME │  5       │  6       │          │   │          │ LEFT/TAB │  DOWN    │RIGHT/PSCR│  ENTER   │
+            &kp TAB    &td HOME DEL   &kp N5     &kp N6     &none          &none  &td TAB LEFT  &td PSCRN DOWN  &kp RIGHT  &kp RET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
