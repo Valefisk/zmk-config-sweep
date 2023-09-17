@@ -59,17 +59,17 @@
         default_layer {
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        //│  Q           │  W           │  F           │  P           │  B           │   │  J           │  L           │  U           │  Y           │  ?/!         │
+        //│  Q           │  W           │  F           │  P           │  B           │   │  J           │  L           │  U           │  Y           │  ? !         │
             &kp Q          &kp W          &kp F          &kp P          &kp B              &kp J          &kp L          &kp U          &kp Y          &td EXCL QMARK
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  A/LGUI      │  R/LALT      │  S/LCTRL     │  T/LSHIFT    │  G           │   │  M           │  N/RSHIFT    │  E/RCTRL     │  I/RALT      │  O/RGUI      │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  A LGUI      │  R LALT      │  S LCTRL     │  T LSHIFT    │  G           │   │  M           │  N RSHIFT    │  E RCTRL     │  I RALT      │  O RGUI      │
+            HRML(A,        R,             S,             T)             &kp G              &kp M          HRMR(N,        E,             I,             O)
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  Z           │  X           │  C           │  D           │  V           │   │  K           │  H           │  ,/;         │  ./:         │  '/"         │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  Z           │  X           │  C           │  D           │  V           │   │  K           │  H           │  , ;         │  . :         │  ' "         │
+            &kp Z          &kp X          &kp C          &kp D          &kp V              &kp K          &kp H         &td SEMI COMMA  &td COLON DOT  &td DQT SQT
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-        //                                             │  SPACE       │  TAB         │   │  ENTER       │  BKSPC       │
-                                                         &kp A          &kp A              &kp A          &kp A
+        //                                             │  SPACE       │  TAB NUM     │   │  ENTER SYM   │  BKSPC       │
+                                                         &kp SPACE      &hl NUM TAB        &hl SYM ENTER  &kp BSPC
         //                                             ╰──────────────┴──────────────╯   ╰──────────────┴──────────────╯
             >;
         };
