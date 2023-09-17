@@ -5,22 +5,44 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// Layer numbers definition
+#define ALP 0
+#define SYM 1
+#define NUM 2
+
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHIFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHIFT k1  &ht RCTRL k2  &ht RALT k3  &ht LGUI k4 
 
 / {
     behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
+        hm: homerow_mod {
+            label = "HOMEROW_MOD";
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
         };
-
+        hl: homerow_layer {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_LAYER";
+			#binding-cells = <2>;
+			tapping-term-ms = <220>;
+			quick-tap-ms = <250>;
+			flavor = "tap-preferred";
+			bindings = <&mo>, <&kp>;
+        };
+    	td: tapdance {
+			compatible = "zmk,behavior-hold-tap";
+			label = "TAPDANCE";
+			#binding-cells = <2>;
+			tapping-term-ms = <190>;
+			quick-tap-ms = <250>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
         skm: sticky_key_modifier {
             label = "STICKY_KEY_MODIFIER";
             compatible = "zmk,behavior-sticky-key";
@@ -38,7 +60,7 @@
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         //│  Q           │  W           │  F           │  P           │  B           │   │  J           │  L           │  U           │  Y           │  ?/!         │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+            &kp Q          &kp W          &kp F          &kp P          &kp B              &kp J          &kp L          &kp U          &kp Y          &td EXCL QMARK
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         //│  A/LGUI      │  R/LALT      │  S/LCTRL     │  T/LSHIFT    │  G           │   │  M           │  N/RSHIFT    │  E/RCTRL     │  I/RALT      │  O/RGUI      │
             &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
@@ -52,7 +74,7 @@
             >;
         };
 
-        right_layer {
+        symbols {
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         //│  €           │  #           │  < \leq      │  > \geq      │  @           │   │  ∈ ∉         │  → ⇒        │  ↔ ⇔        │  ⊂ ⊆         │              │
@@ -70,7 +92,7 @@
             >;
         };
 
-        left_layer {
+        numbers {
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         //│  €           │  #           │  < \leq      │  > \geq      │  @           │   │  ∈ ∉         │  → ⇒        │  ↔ ⇔        │  ⊂ ⊆         │              │
