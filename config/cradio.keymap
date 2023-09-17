@@ -12,7 +12,10 @@
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &hm LGUI k1  &hm LALT k2  &hm LCTRL k3  &hm LSHIFT k4
-#define HRMR(k1,k2,k3,k4) &hm RSHIFT k1  &hm RCTRL k2  &hm RALT k3  &hm LGUI k4 
+#define HRMR(k1,k2,k3,k4) &hm RSHIFT k1  &hm RCTRL k2  &hm RALT k3  &hm LGUI k4
+
+// Arrow key CTRL mods macro
+#define LCARR(k1) &td LC(k1) k1
 
 / {
     behaviors {
@@ -104,14 +107,14 @@
         numbers {
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        //│              │              │              │              │              │   │              │  7           │  8           │  9           │              │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  ESC         │  VOL DOWN    │  UP +LC      │  VOL UP      │  HOME        │   │              │  7           │  8           │  9           │              │ VOL DOWN + VOL UP = MUTE
+            &kp ESC        &kp C_VOL_DN   &td LC(UP) UP  &kp C_VOL_UP   &kp HOME           &kp A          &kp A          &kp A          &kp A          &kp A
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  CAPS        │              │              │              │              │   │  0           │  4           │  5           │  6           │              │
-            &caps CAPS 0   &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  CAPS WL     │  LEFT +LC    │  DOWN +LC    │  RIGHT +LC   │  END         │   │  0           │  4           │  5           │  6           │              │
+            &caps CAPS 0   &td LC(LEFT) LEFT  &td LC(DOWN) DOWN  &td LC(RIGHT) RIGHT  &kp END  &kp A      &kp A          &kp A          &kp A          &kp A          &kp A
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│              │              │              │              │              │   │              │  1           │  2           │  3           │              │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  PSCRN LSHFT │  MED BACK    │  MED PAUSE   │  MED FWD     │              │   │              │  1           │  2           │  3           │              │
+            &hm LSHFT PSCRN  &kp A        &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
         //                                             │              │              │   │              │              │
                                                          &kp A          &kp A              &kp A          &kp A
