@@ -107,13 +107,13 @@
         numbers {
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        //│  ESC         │  VOL DOWN    │  UP +LC      │  VOL UP      │  HOME        │   │              │  7           │  8           │  9           │              │ VOL DOWN + VOL UP = MUTE
+        //│  ESC         │  VOL DOWN    │  UP +LC      │  VOL UP      │  MED PAUSE   │   │              │  7           │  8           │  9           │              │ VOL DOWN + VOL UP = MUTE
             &kp ESC        &kp C_VOL_DN   &td LC(UP) UP  &kp C_VOL_UP   &kp HOME           &kp A          &kp A          &kp A          &kp A          &kp A
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  CAPS WL     │  LEFT +LC    │  DOWN +LC    │  RIGHT +LC   │  END         │   │  0           │  4           │  5           │  6           │              │
+        //│  CAPS WL     │  LEFT +LC    │  DOWN +LC    │  RIGHT +LC   │  MED FWD     │   │  0           │  4           │  5           │  6           │              │ MED PAUSE + MED FWD = BACK
             &caps CAPS 0   &td LC(LEFT) LEFT  &td LC(DOWN) DOWN  &td LC(RIGHT) RIGHT  &kp END  &kp A      &kp A          &kp A          &kp A          &kp A          &kp A
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  PSCRN LSHFT │  MED BACK    │  MED PAUSE   │  MED FWD     │              │   │              │  1           │  2           │  3           │              │
+        //│  PSCRN LSHFT │  HOME        │  END         │  PAGE UP     │  PAGE DOWN   │   │              │  1           │  2           │  3           │              │
             &hm LSHFT PSCRN  &kp A        &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
         //                                             │              │              │   │              │              │
