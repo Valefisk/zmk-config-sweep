@@ -103,8 +103,8 @@
         //│  Z           │  X           │  C           │  D           │  V           │   │  K           │  H           │  , ;         │  . :         │  ' "         │
             &kp Z          &kp X          &kp C          &kp D          &kp V              &kp K          &kp H         &td SEMI COMMA  &td COLON DOT  &td DQT SQT
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-        //                                             │  SPACE MEH   │  TAB NUM     │   │  ENTER SYM   │  BSPC +CTRL  │
-                                                         &hm LC(LS(LALT)) SPACE  &hl NUM TAB  &hl SYM ENTER  &td RC(BSPC) BSPC
+        //                                             │  TAB NUM     │  SPACE MEH   │   │  BSPC +CTRL  │  SYM ENTER   │
+                                                    &hl NUM TAB  &hm LC(LS(LALT)) SPACE  &td RC(BSPC) BSPC  &hl SYM ENTER
         //                                             ╰──────────────┴──────────────╯   ╰──────────────┴──────────────╯
             >;
         };
