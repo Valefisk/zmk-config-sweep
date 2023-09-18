@@ -90,17 +90,17 @@
         symbols {
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-        //│  € £         │  #           │  <           │  >           │  @           │   │              │              │              │              │              │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  € £         │  #           │  <           │  >           │  @           │   │  F13         │  COPY        │  PASTE       │  F14         │  F15         │
+            &td LS(RA(N4)) RA(N5)  &kp HASH  &kp LT      &kp GT         &kp AT             &kp F13        &kp LC(C)      &kp LC(V)      &kp F14        &kp F15
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         //│  - _         │  +           │  (           │  )           │  $           │   │  |           │  /           │  \           │  =           │  ^           │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+            &td UNDER MINUS  &kp PLUS     &kp LPAR       &kp RPAR       &kp DLLR           &kp PIPE       &kp FSLH       &kp BSLH       &kp EQUAL      &kp CARET
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│              │              │  {           │  }           │  ~           │   │  &           │  [           │  ]           │  %           │  *           │
-            &kp A          &kp A          &kp A          &kp A          &kp A              &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  F16         │  F17         │  {           │  }           │  ~           │   │  &           │  [           │  ]           │  %           │  *           │
+            &kp F16        &kp F17        &kp LBRC       &kp RBRC       &kp TILDE          &kp AMPS       &kp LBKT       &kp RBKT       &kp PRCNT      &kp STAR
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
-        //                                             │  SPACE       │  TAB         │   │  ENTER       │  BSPC        │
-                                                         &kp A          &kp A              &kp A          &kp A
+        //                                             │              │              │   │              │              │
+                                                         &trans          &trans            &trans         &trans
         //                                             ╰──────────────┴──────────────╯   ╰──────────────┴──────────────╯
             >;
         };
@@ -109,16 +109,16 @@
             bindings = <
         //╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
         //│  ESC         │  VOL DOWN    │  UP +LC      │  VOL UP      │  MED PAUSE   │   │  + F12       │  7 F7        │  8 F8        │  9 F9        │  *           │ VOL DOWN + VOL UP = MUTE
-            &kp ESC        &kp C_VOL_DN   LCARR(UP)      &kp C_VOL_UP   &kp HOME           &kp A          &kp A          &kp A          &kp A          &kp A
+            &kp ESC        &kp C_VOL_DN   LCARR(UP)      &kp C_VOL_UP   &kp C_PP           &td F12 PLUS   &td F7 N7      &td F8 N8      &td F9 N9      &kp STAR
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤ 4 + 5 + 6 = BLT
-        //│  CAPS WL     │  LEFT +LC    │  DOWN +LC    │  RIGHT +LC   │  MED FWD     │   │  0 F11       │  4 F4        │  5 F5        │  6 F6        │  =           │ MED PAUSE + MED FWD = BACK
-            &caps CAPS 0   LCARR(LEFT)    LCARR(DOWN)    LCARR(RIGHT)   &kp END            &kp A          &kp A          &kp A          &kp A          &kp A
+        //│  CAPS WL     │  LEFT +LC    │  DOWN +LC    │  RIGHT +LC   │  MED NEXT    │   │  0 F11       │  4 F4        │  5 F5        │  6 F6        │  =           │ MED PAUSE + MED FWD = BACK
+            &caps CAPS 0   LCARR(LEFT)    LCARR(DOWN)    LCARR(RIGHT)   &kp C_NEXT         &td F11 N0     &td F4 N4      &td F5 N5      &td F6 N6      &kp EQUAL
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
         //│  PSCRN LSHFT │  HOME        │  END         │  PAGE UP     │  PAGE DOWN   │   │  - F10       │  1 F1        │  2 F2        │  3 F3        │  /           │
-            &hm LSHFT PSCRN  &kp HOME     &kp END        &kp PG_UP      &kp PG_DN          &kp A          &kp A          &kp A          &kp A          &kp A
+            &hm LSHFT PSCRN  &kp HOME     &kp END        &kp PG_UP      &kp PG_DN          &td F10 MINUS  &td F1 N1      &td F2 N2      &td F3 N3      &kp FSLH
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
         //                                             │              │              │   │              │              │
-                                                         &kp A          &kp A              &to BLT        &kp A
+                                                         &trans         &trans             &trans         &trans
         //                                             ╰──────────────┴──────────────╯   ╰──────────────┴──────────────╯
             >;
         };
