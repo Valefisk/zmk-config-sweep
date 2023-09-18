@@ -27,6 +27,18 @@
             layers = <NUM>;
             bindings = <&to BLT>;
         };
+        combo_mute {
+            timeout-ms = <50>;
+            key-positions = <1 3>;
+            layers = <NUM>;
+            bindings = <&kp C_MUTE>;
+        };
+        combo_pause {
+            timeout-ms = <50>;
+            key-positions = <4 14>;
+            layers = <NUM>;
+            bindings = <&kp C_PLAY_PAUSE>;
+        };
     };
     
     behaviors {
