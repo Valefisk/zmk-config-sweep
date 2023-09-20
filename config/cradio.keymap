@@ -115,11 +115,11 @@
         //│  € £         │  #           │  <           │  >           │  @           │   │  F13         │  COPY        │  PASTE       │  F14         │  F15         │
             &td LS(RA(N4)) RA(N5)  &kp HASH  &kp LT      &kp GT         &kp AT             &kp F13        &kp LC(C)      &kp LC(V)      &kp F14        &kp F15
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  - _         │  +           │  (           │  )           │  $           │   │  |           │  /           │  \           │  =           │  ^           │
-            &td UNDER MINUS  &kp PLUS     &kp LPAR       &kp RPAR       &kp DLLR           &kp PIPE       &kp FSLH       &kp BSLH       &kp EQUAL      &kp CARET
+        //│  - _         │  +           │  {           │  }           │  $           │   │  |           │  /           │  \           │  =           │  ^           │
+            &td UNDER MINUS  &kp PLUS     &kp LBRC       &kp RBRC       &kp DLLR           &kp PIPE       &kp FSLH       &kp BSLH       &kp EQUAL      &kp CARET
         //├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤
-        //│  F16         │  F17         │  {           │  }           │  ~           │   │  &           │  [           │  ]           │  %           │  *           │
-            &kp F16        &kp F17        &kp LBRC       &kp RBRC       &kp TILDE          &kp AMPS       &kp LBKT       &kp RBKT       &kp PRCNT      &kp STAR
+        //│  F16         │  F17         │  (           │  )           │  ~           │   │  &           │  [           │  ]           │  %           │  *           │
+            &kp F16        &kp F17        &kp LPAR       &kp RPAR       &kp TILDE          &kp AMPS       &kp LBKT       &kp RBKT       &kp PRCNT      &kp STAR
         //╰──────────────┴──────────────┴──────────────┼──────────────┼──────────────┤   ├──────────────┼──────────────┼──────────────┴──────────────┴──────────────╯
         //                                             │              │              │   │              │              │
                                                          &trans          &trans            &trans         &trans
